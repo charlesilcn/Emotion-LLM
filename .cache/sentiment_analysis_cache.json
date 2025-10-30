@@ -1,0 +1,118 @@
+{
+  "sentiment:good day:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "positive",
+    "score": 0.2,
+    "confidence": 0.2,
+    "keywords": [
+      "good"
+    ]
+  },
+  "sentiment:今天的天气真不错，去迪士尼玩得很开心:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "neutral",
+    "score": 0.0,
+    "confidence": 0.0,
+    "keywords": []
+  },
+  "sentiment:wheather good good day zoo:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "positive",
+    "score": 0.2,
+    "confidence": 0.2,
+    "keywords": [
+      "good"
+    ]
+  },
+  "sentiment:happy go swimming:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "中性",
+    "score": 0.0,
+    "confidence": 0.0,
+    "keywords": []
+  },
+  "sentiment:happy zoo today:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "中性",
+    "score": 0.0,
+    "confidence": 0.3,
+    "keywords": []
+  },
+  "sentiment:今天真开心:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "正面",
+    "score": 1.0,
+    "confidence": 0.65,
+    "keywords": [
+      "开心"
+    ]
+  },
+  "sentiment:今天开心死了:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "正面",
+    "score": 1.0,
+    "confidence": 0.65,
+    "keywords": [
+      "开心"
+    ]
+  },
+  "sentiment:今天天气真好，去迪士尼玩了，wow:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "正面",
+    "score": 1.0,
+    "confidence": 0.65,
+    "keywords": [
+      "好"
+    ]
+  },
+  "sentiment:oh耶，快快的乐:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "中性",
+    "score": 0.0,
+    "confidence": 0.3,
+    "keywords": []
+  },
+  "sentiment:oh耶，快快:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "中性",
+    "score": 0.0,
+    "confidence": 0.3,
+    "keywords": []
+  },
+  "sentiment:oh耶:distilbert-base-uncased-finetuned-sst-2-english:huggingface": {
+    "sentiment": "中性",
+    "score": 0.0,
+    "confidence": 0.3,
+    "keywords": []
+  },
+  "sentiment:oh耶，今天的天气真不错，我去了迪士尼玩，收获满满哦。:rule-based-chinese:local": {
+    "sentiment": "负面",
+    "score": -1.0,
+    "confidence": 0.65,
+    "keywords": [
+      "不错"
+    ]
+  },
+  "sentiment:哦耶，今天天气真好，去了迪士尼玩，真开心:rule-based-english:local": {
+    "sentiment": "正面",
+    "score": 1.0,
+    "confidence": 0.75,
+    "keywords": [
+      "好",
+      "开心"
+    ]
+  },
+  "sentiment:温柔半两，从容一生。:ERNIE-Bot-turbo:doubao": {
+    "sentiment": "中性",
+    "score": 0.0,
+    "confidence": 0.3,
+    "keywords": []
+  },
+  "sentiment:揣着一口袋的开心，满载而归。:ERNIE-Bot-turbo:doubao": {
+    "sentiment": "正面",
+    "score": 1.0,
+    "confidence": 0.65,
+    "keywords": [
+      "开心"
+    ]
+  },
+  "sentiment:好像稍不努力，连快乐都养不起。:ERNIE-Bot-turbo:doubao": {
+    "sentiment": "负面",
+    "score": -1.0,
+    "confidence": 0.75,
+    "keywords": [
+      "好",
+      "快乐"
+    ]
+  }
+}

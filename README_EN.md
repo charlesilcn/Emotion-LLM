@@ -59,14 +59,7 @@ The system adopts a modular design, mainly including the following components:
 - **Data Layer**: Handles data loading, preprocessing, and result storage
 - **Visualization Layer**: Presents analysis results with charts and visualizations
 
-<div align="center">
-```
-┌─────────────┐      ┌───────────────┐      ┌───────────────┐      ┌───────────────┐
-│   Web Layer │─────▶│Analysis Layer │─────▶│  Data Layer   │─────▶│Visualization │
-│  Flask App  │◀────│Sentiment Analyzers│◀────│Data Processing│◀────│Result Display │
-└─────────────┘      └───────────────┘      └───────────────┘      └───────────────┘
-```
-</div>
+![System Architecture](Flow_EN.drawio.png)
 
 ## 📦 Installation Guide
 

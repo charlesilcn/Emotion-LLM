@@ -1,15 +1,17 @@
 <div align="center">
   <br>
-  <h1><span class="cn">🔍 社交媒体情感分析系统</span><span class="en">🔍 Social Media Sentiment Analysis System</span></h1>
-  <p><span class="cn">✨ 多模型支持的智能情感分析平台</span><span class="en">✨ An intelligent sentiment analysis platform with multi-model support</span></p>
-  <div class="language-switcher">
-    <button onclick="switchLanguage('cn')" class="cn">中文</button>
-    <button onclick="switchLanguage('en')" class="en">English</button>
+  <h1>🔍 社交媒体情感分析系统 / Social Media Sentiment Analysis System</h1>
+  <p>✨ 多模型支持的智能情感分析平台 / An intelligent sentiment analysis platform with multi-model support</p>
+  <div style="display: flex; justify-content: center; gap: 10px; margin: 20px 0;">
+    <a href="#中文版本" style="background-color: #4CAF50; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">中文</a>
+    <a href="#english-version" style="background-color: #2196F3; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">English</a>
   </div>
   <br>
 </div>
 
-<div class="content cn">
+---
+
+<a name="中文版本"></a>
 
 ## 📋 项目简介
 
@@ -80,8 +82,8 @@
 
 1. 克隆项目仓库
    ```bash
-   git clone https://your-repository-url/social-media-sentiment-analysis.git
-   cd social-media-sentiment-analysis
+   git clone https://github.com/charlesilcn/Emotion-LLM.git
+   cd Emotion-LLM
    ```
 
 2. 创建虚拟环境
@@ -194,7 +196,7 @@ Content-Type: application/json
 ## 📁 项目结构
 
 ```
-social-media-sentiment-analysis/
+Emotion-LLM/
 ├── app.py                # Flask应用主文件
 ├── main.py               # 命令行入口
 ├── config.py             # 配置文件
@@ -269,10 +271,9 @@ social-media-sentiment-analysis/
 
 感谢所有为项目做出贡献的开发者和用户！
 
-</div>
+---
 
-<div class="content en" style="display: none;">
-
+<a name="english-version"></a>
 ## 📋 Project Introduction
 
 This is a comprehensive social media sentiment analysis system that supports multiple models for text sentiment and emotion analysis. The system provides a user-friendly web interface, allowing users to easily input text and obtain detailed sentiment analysis results.
@@ -322,10 +323,10 @@ The system adopts a modular design, mainly including the following components:
 - **Visualization Layer**: Presents analysis results with charts and visualizations
 
 <div align="center">
-  <pre style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: left; display: inline-block;">
+  <pre style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: left; display: inline-block; white-space: pre;">
   ┌─────────────┐      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
   │   Web Layer │─────▶│Analysis Layer│─────▶│  Data Layer │─────▶│Visualization│
-  │Flask App    │◀────│Sentiment Analyzers│◀────│Data Processing│◀────│Result Display│
+  │  Flask App  │◀────│Sentiment Analyzers│◀────│Data Processing│◀────│Result Display│
   └─────────────┘      └─────────────┘      └─────────────┘      └─────────────┘
   </pre>
 </div>
@@ -456,7 +457,7 @@ Returns the sentiment analysis results of the text.
 ## 📁 Project Structure
 
 ```
-social-media-sentiment-analysis/
+Emotion-LLM/
 ├── app.py                # Flask application main file
 ├── main.py               # Command line entry
 ├── config.py             # Configuration file
@@ -531,89 +532,43 @@ Feel free to submit Issues and Pull Requests to help improve the project!
 
 Thanks to all developers and users who have contributed to the project!
 
-</div>
-
-<script>
-// 语言切换功能
-function switchLanguage(lang) {
-  // 隐藏所有内容
-  document.querySelectorAll('.content').forEach(content => {
-    content.style.display = 'none';
-  });
-  
-  // 显示选中的语言内容
-  document.querySelector(`.content.${lang}`).style.display = 'block';
-  
-  // 保存语言偏好到localStorage
-  localStorage.setItem('preferredLanguage', lang);
-}
-
-// 页面加载时恢复上次的语言选择
-window.onload = function() {
-  const savedLang = localStorage.getItem('preferredLanguage') || 'cn';
-  switchLanguage(savedLang);
-};
-</script>
-
+<!-- 添加装饰性样式 -->
 <style>
-.language-switcher {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+/* 基本样式 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
-.language-switcher button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-}
-
-.language-switcher button:hover {
-  background-color: #45a049;
-}
-
-.content {
-  margin: 20px 0;
-}
-
-/* 装饰性样式 */
+/* 标题样式 */
 h1 {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
-@media (max-width: 768px) {
-  .language-switcher {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .language-switcher button {
-    width: 100%;
-    max-width: 200px;
-  }
+h2 {
+  color: #2c3e50;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3em;
 }
 
-/* 为代码块添加样式 */
+/* 代码块样式 */
 pre {
   background-color: #f5f5f5;
   border-radius: 4px;
   padding: 16px;
   overflow: auto;
   font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 code {
@@ -621,5 +576,21 @@ code {
   padding: 2px 4px;
   border-radius: 3px;
   font-family: 'Courier New', Courier, monospace;
+}
+
+/* 表格样式 */
+table {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  pre {
+    padding: 12px;
+  }
 }
 </style>

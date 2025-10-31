@@ -1,66 +1,3 @@
-<!-- Adding decorative styles -->
-<style>
-/* Basic styles */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9fa;
-}
-
-/* Heading styles */
-h1 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 20px;
-  font-size: 2.5em;
-  font-weight: bold;
-}
-
-h2 {
-  color: #2c3e50;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.3em;
-}
-
-/* Code block styles */
-pre {
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  padding: 16px;
-  overflow: auto;
-  font-family: 'Courier New', Courier, monospace;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-code {
-  background-color: #f5f5f5;
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/* Table styles */
-table {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2em;
-  }
-  
-  pre {
-    padding: 12px;
-  }
-}
-</style>
-
 <div align="center">
   <br>
   <h1>🔍 Social Media Sentiment Analysis System</h1>
@@ -123,12 +60,12 @@ The system adopts a modular design, mainly including the following components:
 - **Visualization Layer**: Presents analysis results with charts and visualizations
 
 <div align="center">
-  <pre style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: left; display: inline-block; white-space: pre;">
-  ┌─────────────┐      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-  │   Web Layer │─────▶│Analysis Layer│─────▶│  Data Layer │─────▶│Visualization│
-  │  Flask App  │◀────│Sentiment Analyzers│◀────│Data Processing│◀────│Result Display│
-  └─────────────┘      └─────────────┘      └─────────────┘      └─────────────┘
-  </pre>
+```
+┌─────────────┐      ┌───────────────┐      ┌───────────────┐      ┌───────────────┐
+│   Web Layer │─────▶│Analysis Layer │─────▶│  Data Layer   │─────▶│Visualization │
+│  Flask App  │◀────│Sentiment Analyzers│◀────│Data Processing│◀────│Result Display │
+└─────────────┘      └───────────────┘      └───────────────┘      └───────────────┘
+```
 </div>
 
 ## 📦 Installation Guide

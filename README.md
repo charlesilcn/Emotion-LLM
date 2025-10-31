@@ -1,17 +1,78 @@
+<!-- 添加装饰性样式 -->
+<style>
+/* 基本样式 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* 标题样式 */
+h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3em;
+}
+
+/* 代码块样式 */
+pre {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: auto;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+code {
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* 表格样式 */
+table {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  pre {
+    padding: 12px;
+  }
+}
+</style>
+
 <div align="center">
   <br>
-  <h1>🔍 社交媒体情感分析系统 / Social Media Sentiment Analysis System</h1>
-  <p>✨ 多模型支持的智能情感分析平台 / An intelligent sentiment analysis platform with multi-model support</p>
+  <h1>🔍 社交媒体情感分析系统</h1>
+  <p>✨ 多模型支持的智能情感分析平台</p>
   <div style="display: flex; justify-content: center; gap: 10px; margin: 20px 0;">
-    <a href="#中文版本" style="background-color: #4CAF50; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">中文</a>
-    <a href="#english-version" style="background-color: #2196F3; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">English</a>
+    <a href="README.md" style="background-color: #4CAF50; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">中文</a>
+    <a href="README_EN.md" style="background-color: #2196F3; border: none; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">English</a>
   </div>
   <br>
 </div>
 
 ---
-
-<a name="中文版本"></a>
 
 ## 📋 项目简介
 
@@ -62,7 +123,7 @@
 - **可视化层**：展示分析结果的图表和可视化内容
 
 <div align="center">
-  <pre style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: left; display: inline-block;">
+  <pre style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: left; display: inline-block; white-space: pre;">
   ┌─────────────┐      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
   │   Web层     │─────▶│   分析层    │─────▶│   数据层    │─────▶│ 可视化层    │
   │  Flask应用  │◀────│ 情感分析器  │◀────│ 数据处理    │◀────│ 结果展示    │
@@ -138,459 +199,174 @@ python main.py --input data/raw/sample_social_media.csv --output data/processed/
   <table style="border-collapse: collapse; width: 100%; max-width: 800px; margin: 20px 0;">
     <tr style="background-color: #f8f9fa;">
       <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">模型类型</th>
-      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">模型名称</th>
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">支持的模型</th>
       <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">特点</th>
     </tr>
     <tr>
       <td style="padding: 12px; border: 1px solid #ddd;">Hugging Face</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">多种免费模型</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">本地化运行，无需API密钥</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">bert-base-chinese, roberta-base-chinese</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">开源免费，适合中文文本</td>
     </tr>
     <tr>
       <td style="padding: 12px; border: 1px solid #ddd;">OpenAI</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">GPT系列模型</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">高精度但需要API密钥</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">GPT-3.5, GPT-4</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">分析精度高，需API密钥</td>
     </tr>
     <tr>
       <td style="padding: 12px; border: 1px solid #ddd;">豆包</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">豆包大语言模型</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">适合中文场景，需要API密钥</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">豆包大模型</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">对中文语境理解好</td>
     </tr>
     <tr>
       <td style="padding: 12px; border: 1px solid #ddd;">DeepSeek</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">DeepSeek大语言模型</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">专业代码和文本分析</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">本地规则模型</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">内置情感词典</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">轻量级，离线可用</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">DeepSeek-R1</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">开源模型，性能优异</td>
     </tr>
   </table>
 </div>
 
 ## 📚 API接口文档
 
+系统提供了RESTful API接口，方便其他系统集成：
+
 ### 获取支持的模型列表
 
-```http
-GET /models
+```bash
+GET /api/models
 ```
 
-返回所有支持的模型及其连接状态。
-
-### 情感分析
-
-```http
-POST /analyze
-Content-Type: application/json
-
+响应示例：
+```json
 {
-  "text": "要分析的文本内容",
-  "model_id": "selected_model_id"
+  "models": ["bert-base-chinese", "roberta-base-chinese", "gpt-3.5", "gpt-4", "doubao", "deepseek-r1"]
 }
 ```
 
-返回文本的情感分析结果。
+### 情感分析接口
+
+```bash
+POST /api/analyze
+Content-Type: application/json
+
+{
+  "text": "这是一段需要分析情感的文本",
+  "model": "bert-base-chinese"
+}
+```
+
+响应示例：
+```json
+{
+  "text": "这是一段需要分析情感的文本",
+  "sentiment": "positive",
+  "confidence": 0.92,
+  "emotions": [
+    {"emotion": "joy", "score": 0.85},
+    {"emotion": "trust", "score": 0.32}
+  ],
+  "model": "bert-base-chinese",
+  "timestamp": "2023-11-15T10:30:45Z"
+}
+```
 
 ## 📁 项目结构
 
+项目采用清晰的模块化结构，便于维护和扩展：
+
 ```
-Emotion-LLM/
-├── app.py                # Flask应用主文件
-├── main.py               # 命令行入口
-├── config.py             # 配置文件
-├── requirements.txt      # 项目依赖
+├── app.py                 # Web服务入口
+├── main.py                # 命令行工具入口
+├── config.py              # 配置文件
+├── requirements.txt       # 依赖列表
 ├── src/
-│   ├── analysis/         # 分析模块
+│   ├── analysis/          # 情感分析模块
 │   │   ├── __init__.py
 │   │   ├── llm_sentiment_analyzer.py    # LLM情感分析器
 │   │   └── traditional_sentiment_analyzer.py  # 传统情感分析器
-│   ├── data/             # 数据处理模块
+│   ├── data/              # 数据处理模块
 │   │   ├── __init__.py
-│   │   ├── data_loader.py
-│   │   └── preprocessor.py
-│   └── visualization/    # 可视化模块
+│   │   ├── data_loader.py        # 数据加载器
+│   │   └── preprocessor.py       # 数据预处理器
+│   └── visualization/     # 可视化模块
 │       ├── __init__.py
-│       └── visualizer.py
-├── templates/            # Web模板
-│   └── index.html        # 主页面
-├── data/
-│   ├── raw/              # 原始数据
-│   └── processed/        # 处理后的数据
-└── models/               # 模型存储目录
+│       └── visualizer.py         # 可视化工具
+├── data/                  # 数据目录
+│   ├── raw/               # 原始数据
+│   └── processed/         # 处理后的数据
+├── models/                # 模型文件
+├── templates/             # Web模板
+└── notebooks/             # 分析笔记本
 ```
 
-## 🔧 配置说明
+## ⚙️ 配置说明
 
-主要配置项位于`config.py`文件中：
+主要配置项在`config.py`和`.env`文件中：
 
-- **OPENAI_API_KEY**: OpenAI API密钥（可选）
-- **HUGGINGFACE_API_KEY**: Hugging Face API密钥（可选）
-- **MAX_TOKENS**: 最大生成token数
-- **TEMPERATURE**: 生成温度，控制输出随机性
-- **BATCH_SIZE**: 批处理大小
-- **SENTIMENT_CLASSES**: 情感分类标签
-- **EMOTION_CLASSES**: 情绪分类标签
-- **CACHE_DIR**: 缓存目录
+### config.py 主要配置
+
+- `MODEL_CONFIG`: 模型配置字典
+- `API_KEYS`: API密钥配置（从环境变量读取）
+- `DEFAULT_MODEL`: 默认使用的模型
+- `MAX_BATCH_SIZE`: 批处理最大数量
+- `ANALYSIS_TIMEOUT`: 分析超时时间
+
+### .env 环境变量配置
+
+复制`.env.example`为`.env`，并设置以下环境变量：
+
+```dotenv
+# 数据库连接信息（如需）
+DATABASE_URL="sqlite:///emotion_analysis.db"
+
+# API密钥配置
+OPENAI_API_KEY="your_openai_api_key"
+DOUBAO_API_KEY="your_doubao_api_key"
+DEEPSEEK_API_KEY="your_deepseek_api_key"
+
+# 模型配置
+DEFAULT_MODEL="bert-base-chinese"
+MAX_CONCURRENT_REQUESTS=5
+```
 
 ## 🛠️ 开发指南
 
 ### 添加新模型
 
-要添加新的模型支持，请在`src/analysis/llm_sentiment_analyzer.py`中：
-
-1. 在`model_type`参数中添加新模型类型
-2. 实现相应的`_model_type_analyze_sentiment`方法
-3. 更新`check_connection`方法以支持新模型的连接检查
+1. 在`src/analysis/`目录下创建新的分析器类
+2. 实现`analyze`和`batch_analyze`方法
+3. 在`config.py`中配置新模型
+4. 更新API接口以支持新模型
 
 ### 前端开发
 
-前端代码位于`templates/index.html`，使用纯HTML、CSS和JavaScript实现。
+前端使用Flask模板引擎，位于`templates/`目录下。修改`index.html`以更新Web界面。
 
 ## ⚡ 性能优化
 
-- 使用异步连接检测提高响应速度
-- 实现模型状态缓存减少重复检查
-- 采用延迟初始化策略减少启动时间
-- 配置适当的超时设置避免长时间等待
+- 使用异步请求处理多个模型
+- 实现请求缓存，避免重复分析
+- 批处理大量文本以提高效率
+- 模型预加载减少首次分析延迟
 
 ## 📄 许可证
 
-[MIT License](LICENSE)
+本项目采用MIT许可证。详见LICENSE文件。
 
 ## 📧 联系方式
 
-如有问题或建议，请联系项目维护者。
+- 项目维护者：charlesilcn
+- GitHub: https://github.com/charlesilcn/Emotion-LLM
 
-## 🎯 贡献指南
+## 🤝 贡献指南
 
-欢迎提交Issue和Pull Request来帮助改进项目！
+欢迎贡献代码！请遵循以下步骤：
 
-## 💖 鸣谢
+1. Fork本仓库
+2. 创建您的特性分支 (`git checkout -b feature/amazing-feature`)
+3. 提交您的更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 开启Pull Request
 
-感谢所有为项目做出贡献的开发者和用户！
-
----
-
-<a name="english-version"></a>
-## 📋 Project Introduction
-
-This is a comprehensive social media sentiment analysis system that supports multiple models for text sentiment and emotion analysis. The system provides a user-friendly web interface, allowing users to easily input text and obtain detailed sentiment analysis results.
-
-<div align="center">
-  <img src="https://via.placeholder.com/600x300?text=Sentiment%20Analysis%20System%20Demo" alt="System Demo Interface" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-</div>
-
-## 🌟 Key Features
-
-- **Multi-model Support**: Integrates multiple large language models including Hugging Face, OpenAI, Doubao, and DeepSeek
-- **Real-time Sentiment Analysis**: Quickly analyze text sentiment tendency (positive/negative/neutral) and confidence level
-- **Emotion Recognition**: Identify multiple emotions contained in text (such as joy, anger, sadness, etc.)
-- **Batch Processing**: Support batch analysis of multiple text data
-- **Visual Presentation**: Intuitively display sentiment and emotion analysis results
-- **Asynchronous Connection Detection**: Efficiently detect model connection status for faster response
-- **Degradation Mechanism**: Automatically switch to backup analysis solutions when advanced models are unavailable
-
-<div align="center">
-  <table style="border-collapse: collapse; width: 100%; max-width: 800px; margin: 20px 0;">
-    <tr style="background-color: #f8f9fa;">
-      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">✨ Feature Highlights</th>
-      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">💡 Technical Features</th>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">Multi-model Integration</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Modular design, easy to extend</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">Real-time Analysis</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Asynchronous processing, fast response</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">Batch Processing</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Efficient parallel computing</td>
-    </tr>
-  </table>
-</div>
-
-## 🏗️ System Architecture
-
-The system adopts a modular design, mainly including the following components:
-
-- **Web Layer**: Flask-based web service providing user interface and API
-- **Analysis Layer**: Contains traditional sentiment analyzer and LLM sentiment analyzer
-- **Data Layer**: Handles data loading, preprocessing, and result storage
-- **Visualization Layer**: Presents analysis results with charts and visualizations
-
-<div align="center">
-  <pre style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; text-align: left; display: inline-block; white-space: pre;">
-  ┌─────────────┐      ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
-  │   Web Layer │─────▶│Analysis Layer│─────▶│  Data Layer │─────▶│Visualization│
-  │  Flask App  │◀────│Sentiment Analyzers│◀────│Data Processing│◀────│Result Display│
-  └─────────────┘      └─────────────┘      └─────────────┘      └─────────────┘
-  </pre>
-</div>
-
-## 📦 Installation Guide
-
-### Prerequisites
-
-- Python 3.8+
-- pip package manager
-- Git
-
-### Installation Steps
-
-1. Clone the project repository
-   ```bash
-   git clone https://your-repository-url/social-media-sentiment-analysis.git
-   cd social-media-sentiment-analysis
-   ```
-
-2. Create a virtual environment
-   ```bash
-   python -m venv .venv
-   ```
-
-3. Activate the virtual environment
-   - Windows:
-     ```bash
-     .venv\Scripts\activate
-     ```
-   - macOS/Linux:
-     ```bash
-     source .venv/bin/activate
-     ```
-
-4. Install dependencies
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Configure environment variables
-   Copy the `.env.example` file to `.env` and configure the relevant parameters as needed
-   ```bash
-   cp .env.example .env
-   ```
-
-## 🚀 Usage Instructions
-
-### Start Web Service
-
-```bash
-python app.py
-```
-
-After the service starts, visit `http://localhost:5000` to use the web interface.
-
-### Command Line Usage
-
-Use `main.py` for batch analysis:
-
-```bash
-python main.py --input data/raw/sample_social_media.csv --output data/processed/analysis_results.csv
-```
-
-## 🤖 Model Support
-
-The system supports multiple sentiment analysis models, including:
-
-<div align="center">
-  <table style="border-collapse: collapse; width: 100%; max-width: 800px; margin: 20px 0;">
-    <tr style="background-color: #f8f9fa;">
-      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Model Type</th>
-      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Model Name</th>
-      <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Features</th>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">Hugging Face</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Multiple Free Models</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Local execution, no API key required</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">OpenAI</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">GPT Series Models</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">High accuracy but requires API key</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">Doubao</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Doubao LLM</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Suitable for Chinese scenes, requires API key</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">DeepSeek</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">DeepSeek LLM</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Professional code and text analysis</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border: 1px solid #ddd;">Local Rule Model</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Built-in Sentiment Dictionary</td>
-      <td style="padding: 12px; border: 1px solid #ddd;">Lightweight, offline available</td>
-    </tr>
-  </table>
-</div>
-
-## 📚 API Documentation
-
-### Get Supported Models
-
-```http
-GET /models
-```
-
-Returns all supported models and their connection status.
-
-### Sentiment Analysis
-
-```http
-POST /analyze
-Content-Type: application/json
-
-{
-  "text": "Text content to analyze",
-  "model_id": "selected_model_id"
-}
-```
-
-Returns the sentiment analysis results of the text.
-
-## 📁 Project Structure
-
-```
-Emotion-LLM/
-├── app.py                # Flask application main file
-├── main.py               # Command line entry
-├── config.py             # Configuration file
-├── requirements.txt      # Project dependencies
-├── src/
-│   ├── analysis/         # Analysis module
-│   │   ├── __init__.py
-│   │   ├── llm_sentiment_analyzer.py    # LLM sentiment analyzer
-│   │   └── traditional_sentiment_analyzer.py  # Traditional sentiment analyzer
-│   ├── data/             # Data processing module
-│   │   ├── __init__.py
-│   │   ├── data_loader.py
-│   │   └── preprocessor.py
-│   └── visualization/    # Visualization module
-│       ├── __init__.py
-│       └── visualizer.py
-├── templates/            # Web templates
-│   └── index.html        # Main page
-├── data/
-│   ├── raw/              # Raw data
-│   └── processed/        # Processed data
-└── models/               # Model storage directory
-```
-
-## 🔧 Configuration Instructions
-
-Main configuration items are located in the `config.py` file:
-
-- **OPENAI_API_KEY**: OpenAI API key (optional)
-- **HUGGINGFACE_API_KEY**: Hugging Face API key (optional)
-- **MAX_TOKENS**: Maximum number of generated tokens
-- **TEMPERATURE**: Generation temperature, controls output randomness
-- **BATCH_SIZE**: Batch processing size
-- **SENTIMENT_CLASSES**: Sentiment classification labels
-- **EMOTION_CLASSES**: Emotion classification labels
-- **CACHE_DIR**: Cache directory
-
-## 🛠️ Development Guide
-
-### Adding New Models
-
-To add support for a new model, in `src/analysis/llm_sentiment_analyzer.py`:
-
-1. Add the new model type to the `model_type` parameter
-2. Implement the corresponding `_model_type_analyze_sentiment` method
-3. Update the `check_connection` method to support connection checking for the new model
-
-### Frontend Development
-
-Frontend code is located in `templates/index.html`, implemented using pure HTML, CSS, and JavaScript.
-
-## ⚡ Performance Optimization
-
-- Use asynchronous connection detection to improve response speed
-- Implement model state caching to reduce duplicate checks
-- Adopt lazy initialization strategy to reduce startup time
-- Configure appropriate timeout settings to avoid long waits
-
-## 📄 License
-
-[MIT License](LICENSE)
-
-## 📧 Contact Information
-
-For questions or suggestions, please contact the project maintainers.
-
-## 🎯 Contribution Guide
-
-Feel free to submit Issues and Pull Requests to help improve the project!
-
-## 💖 Acknowledgments
+## 🙏 鸣谢
 
 Thanks to all developers and users who have contributed to the project!
-
-<!-- 添加装饰性样式 -->
-<style>
-/* 基本样式 */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
-}
-
-/* 标题样式 */
-h1 {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 20px;
-  font-size: 2.5em;
-  font-weight: bold;
-}
-
-h2 {
-  color: #2c3e50;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.3em;
-}
-
-/* 代码块样式 */
-pre {
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  padding: 16px;
-  overflow: auto;
-  font-family: 'Courier New', Courier, monospace;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-code {
-  background-color: #f5f5f5;
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/* 表格样式 */
-table {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2em;
-  }
-  
-  pre {
-    padding: 12px;
-  }
-}
-</style>
